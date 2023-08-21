@@ -57,7 +57,7 @@ package javaBasic;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class B2990 {
+public class B2890 {
     public static void main(String[] args) throws IOException {
         BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
 
