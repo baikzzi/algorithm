@@ -7,12 +7,12 @@ public class B1149 {
 	static int N, ans;
 	static int[][] cost, dp;
 	public static void main(String[] args) throws IOException {
-		// RGB°Å¸®¿¡ N°³ÀÇ Áý, °Å¸®´Â ¼±ºÐÀ¸·Î ³ªÅ¸³¾ ¼ö ÀÖ°í, 1¹ø ÁýºÎÅÍ N¹øÁýÀÌ ¼ø¼­´ë·Î ÀÖ´Ù
-	    // ÁýÀº »¡, ÃÊ, ÆÄ Áß ÇÏ³ª·Î »öÄ¥ÇØ¾ßÇÔ
-	    // °¢°¢ÀÇ ÁýÀ» »¡, ÃÊ, ÆÄ·Î Ä¥ÇÏ´Â ºñ¿ëÀÌ ÁÖ¾îÁ³À» ¶§, ¾Æ·¡ ±ÔÄ¢À» ¸¸Á·ÇÏ¸é¼­ ¸ðµç ÁýÀ» Ä¥ÇÏ´Â ºñ¿ëÀÇ ÃÖ¼Ú°ª
-	    // 1¹ø ÁýÀÇ »öÀº 2¹ø ÁýÀÇ »ö°ú °°Áö ¾Ê¾Æ¾ß ÇÔ
-	    // N¹ø ÁýÀÇ »öÀº N-1¹ø ÁýÀÇ »ö°ú °°Áö ¾Ê¾Æ¾ß ÇÔ
-	    // 2~N-1¹ø ÁýÀÇ »öÀº °¢°¢ ÁÂ ¿ì ÁýÀÇ »ö°ú ´Þ¶ó¾ß ÇÔ
+	    // RGBê±°ë¦¬ì— Nê°œì˜ ì§‘, ê±°ë¦¬ëŠ” ì„ ë¶„ìœ¼ë¡œ ë‚˜íƒ€ë‚¼ ìˆ˜ ìžˆê³ , 1ë²ˆ ì§‘ë¶€í„° Në²ˆì§‘ì´ ìˆœì„œëŒ€ë¡œ ìžˆë‹¤
+	    // ì§‘ì€ ë¹¨, ì´ˆ, íŒŒ ì¤‘ í•˜ë‚˜ë¡œ ìƒ‰ì¹ í•´ì•¼í•¨
+	    // ê°ê°ì˜ ì§‘ì„ ë¹¨, ì´ˆ, íŒŒë¡œ ì¹ í•˜ëŠ” ë¹„ìš©ì´ ì£¼ì–´ì¡Œì„ ë•Œ, ì•„ëž˜ ê·œì¹™ì„ ë§Œì¡±í•˜ë©´ì„œ ëª¨ë“  ì§‘ì„ ì¹ í•˜ëŠ” ë¹„ìš©ì˜ ìµœì†Ÿê°’
+	    // 1ë²ˆ ì§‘ì˜ ìƒ‰ì€ 2ë²ˆ ì§‘ì˜ ìƒ‰ê³¼ ê°™ì§€ ì•Šì•„ì•¼ í•¨
+	    // Në²ˆ ì§‘ì˜ ìƒ‰ì€ N-1ë²ˆ ì§‘ì˜ ìƒ‰ê³¼ ê°™ì§€ ì•Šì•„ì•¼ í•¨
+	    // 2~N-1ë²ˆ ì§‘ì˜ ìƒ‰ì€ ê°ê° ì¢Œ ìš° ì§‘ì˜ ìƒ‰ê³¼ ë‹¬ë¼ì•¼ í•¨
 	    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	    StringTokenizer st;
@@ -29,7 +29,8 @@ public class B1149 {
 	    dp[0][0] = cost[0][0];
 	    dp[0][1] = cost[0][1];
 	    dp[0][2] = cost[0][2];
-	    
+		
+	    // dp ë°°ì—´ì—ëŠ” iê°œ ì§‘ ìƒ‰ì¹ í•  ê²½ìš° R, G, B ê°ê°ìœ¼ë¡œ ëë‚  ë•Œ ìµœì†Œê°’ì„ ì €ìž¥
 	    for (int i = 1; i < N; i++) {
 	    	for (int j = 0; j < 3; j++) {
 	    		if (j == 0) {
