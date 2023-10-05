@@ -16,6 +16,9 @@ public class B11497 {
 		// 이때의 난이도는 | 2-9 | = 7 이다. 
 		// 더 나은 배열 [2, 5, 9, 7, 4]를 만들 수 있고 이때 난이도는 |5-9| = 4이다.
 		// 이때 최소 난이도 4가 정답
+
+		// 힌트 : 통나무 높이의 모양이 정규분포 모양이여야 함
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st;
