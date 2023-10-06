@@ -56,7 +56,7 @@ public class B14716 {
 			x = stackX.pop();
 			y = stackY.pop();
 			
-			if (visited[x][y]) continue;
+			if (visited[x][y]) continue; // 없어도 될 것 같음
 			visited[x][y] = true;
 			
 			for (int i = 0; i < 8; i++) {
